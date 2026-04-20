@@ -1,0 +1,8 @@
+def linear_search(dizi, hedef):
+    for i in range(len(dizi)):
+        if dizi[i] == hedef:
+            return i
+    return -1
+
+liste = [10, 20, 30, 40]
+print(linear_search(liste, 30))
