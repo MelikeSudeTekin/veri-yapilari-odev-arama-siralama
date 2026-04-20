@@ -1,0 +1,12 @@
+def quick_sort(dizi):
+    if len(dizi) <= 1:
+        return dizi
+
+    pivot = dizi[len(dizi)//2]
+    sol = [x for x in dizi if x < pivot]
+    orta = [x for x in dizi if x == pivot]
+    sag = [x for x in dizi if x > pivot]
+
+    return quick_sort(sol) + orta + quick_sort(sag)
+
+print(quick_sort([5,1,9,3]))

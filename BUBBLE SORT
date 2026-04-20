@@ -1,0 +1,9 @@
+def bubble_sort(dizi):
+    for i in range(len(dizi)):
+        for j in range(len(dizi) - 1):
+            if dizi[j] > dizi[j + 1]:
+                dizi[j], dizi[j + 1] = dizi[j + 1], dizi[j]
+    return dizi
+
+liste = [5, 2, 9, 1]
+print(bubble_sort(liste))

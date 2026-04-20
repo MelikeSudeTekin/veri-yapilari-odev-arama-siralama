@@ -1,0 +1,33 @@
+def merge_sort(dizi):
+    if len(dizi) > 1:
+        mid = len(dizi)//2
+        sol = dizi[:mid]
+        sag = dizi[mid:]
+
+        merge_sort(sol)
+        merge_sort(sag)
+
+        i = j = k = 0
+
+        while i < len(sol) and j < len(sag):
+            if sol[i] < sag[j]:
+                dizi[k] = sol[i]
+                i += 1
+            else:
+                dizi[k] = sag[j]
+                j += 1
+            k += 1
+
+        while i < len(sol):
+            dizi[k] = sol[i]
+            i += 1
+            k += 1
+
+        while j < len(sag):
+            dizi[k] = sag[j]
+            j += 1
+            k += 1
+
+    return dizi
+
+print(merge_sort([6,3,8,2]))
